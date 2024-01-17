@@ -98,31 +98,99 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           child: Center(
               child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border(
-                        top: BorderSide(width: 1.0, color: Colors.black),
-                        left: BorderSide(width: 1.0, color: Colors.black),
-                        right: BorderSide(width: 1.0, color: Colors.black),
-                        bottom: BorderSide(width: 1.0, color: Colors.black),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border(
+                            top: BorderSide(width: 1.0, color: Colors.black),
+                            left: BorderSide(width: 1.0, color: Colors.black),
+                            right: BorderSide(width: 1.0, color: Colors.black),
+                            bottom: BorderSide(width: 1.0, color: Colors.black),
+                          ),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        height: 100,
+                        width: 100,
+                        child: TextButton(
+                          child: Text(
+                            "$card1",
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          onPressed: () {
+                            carde1();
+                          },
+                        ),
                       ),
-                      borderRadius: BorderRadius.circular(12),
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border(
+                            top: BorderSide(width: 1.0, color: Colors.black),
+                            left: BorderSide(width: 1.0, color: Colors.black),
+                            right: BorderSide(width: 1.0, color: Colors.black),
+                            bottom: BorderSide(width: 1.0, color: Colors.black),
+                          ),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        height: 100,
+                        width: 100,
+                        child: TextButton(
+                          child: Text(
+                            "$card2",
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          onPressed: () {
+                            carde2();
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border(
+                          top: BorderSide(width: 1.0, color: Colors.black),
+                          left: BorderSide(width: 1.0, color: Colors.black),
+                          right: BorderSide(width: 1.0, color: Colors.black),
+                          bottom: BorderSide(width: 1.0, color: Colors.black),
+                        ),
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      height: 50,
+                      width: 200,
+                      child: Center(
+                        child: Text(
+                          "$user",
+                          style: TextStyle(fontSize: 20, color: Colors.orange),
+                        ),
+                      ),
                     ),
-                    height: 100,
-                    width: 100,
-                    child: TextButton(
-                      child: Text(
-                        "$card1",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(0.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border(
+                          top: BorderSide(width: 1.0, color: Colors.black),
+                          left: BorderSide(width: 1.0, color: Colors.black),
+                          right: BorderSide(width: 1.0, color: Colors.black),
+                          bottom: BorderSide(width: 1.0, color: Colors.black),
+                        ),
+                        borderRadius: BorderRadius.circular(15),
                       ),
-                      onPressed: () {
-                        carde1();
-                      },
+                      height: 100,
+                      width: 400,
+                      child: Center(
+                        child: Text(
+                          "YOUR HIGH SCORE IS : $point",
+                          style: TextStyle(fontSize: 20, color: Colors.deepPurpleAccent),
+                        ),
+                      ),
                     ),
                   ),
                   Container(
@@ -133,90 +201,22 @@ class _MyHomePageState extends State<MyHomePage> {
                         right: BorderSide(width: 1.0, color: Colors.black),
                         bottom: BorderSide(width: 1.0, color: Colors.black),
                       ),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(50),
                     ),
                     height: 100,
                     width: 100,
                     child: TextButton(
                       child: Text(
-                        "$card2",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        "RESET",
+                        style: TextStyle(fontSize: 20, color: Colors.black),
                       ),
                       onPressed: () {
-                        carde2();
+                        rese();
                       },
                     ),
                   ),
                 ],
-              ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(width: 1.0, color: Colors.black),
-                      left: BorderSide(width: 1.0, color: Colors.black),
-                      right: BorderSide(width: 1.0, color: Colors.black),
-                      bottom: BorderSide(width: 1.0, color: Colors.black),
-                    ),
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  height: 50,
-                  width: 200,
-                  child: Center(
-                    child: Text(
-                      "$user",
-                      style: TextStyle(fontSize: 20, color: Colors.orange),
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(0.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(width: 1.0, color: Colors.black),
-                      left: BorderSide(width: 1.0, color: Colors.black),
-                      right: BorderSide(width: 1.0, color: Colors.black),
-                      bottom: BorderSide(width: 1.0, color: Colors.black),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  height: 100,
-                  width: 400,
-                  child: Center(
-                    child: Text(
-                      "YOUR HIGH SCORE IS : $point",
-                      style: TextStyle(fontSize: 20, color: Colors.deepPurpleAccent),
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(width: 1.0, color: Colors.black),
-                    left: BorderSide(width: 1.0, color: Colors.black),
-                    right: BorderSide(width: 1.0, color: Colors.black),
-                    bottom: BorderSide(width: 1.0, color: Colors.black),
-                  ),
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                height: 100,
-                width: 100,
-                child: TextButton(
-                  child: Text(
-                    "RESET",
-                    style: TextStyle(fontSize: 20, color: Colors.black),
-                  ),
-                  onPressed: () {
-                    rese();
-                  },
-                ),
-              ),
-            ],
-          )),
+              )),
         ));
   }
 }
